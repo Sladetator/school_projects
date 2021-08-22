@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxSiivous.TietojaController">
+   <bottom>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button fx:id="btnOK" mnemonicParsing="false" onMouseClicked="#suljeIkkuna" text="OK" />
+        </buttons>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </ButtonBar>
+   </bottom>
+   <top>
+      <Label text="Tietoja" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <TextArea prefHeight="200.0" prefWidth="200.0" text="Versio: 0.1&#10;Tekijät:&#10;Valtteri Järvinen valtteri.jarvinen@windowslive.com&#10;Viljami Järvinen viaielja@student.jyu.fi" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

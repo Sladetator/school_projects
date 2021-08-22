@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.ListChooser?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="609.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxSiivous.TyontekijatController">
+   <bottom>
+      <SplitPane dividerPositions="0.33277591973244147" maxHeight="50.0" BorderPane.alignment="CENTER">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                     <children>
+                        <Button fx:id="btnLisaa" mnemonicParsing="false" onMouseClicked="#avaaLisaa" text="Lisää" />
+                        <Button fx:id="btnPoista" mnemonicParsing="false" onMouseClicked="#avaaPoista" text="Poista" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="100.0">
+               <children>
+                  <HBox layoutX="124.0" layoutY="-2.0" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                     <children>
+                        <Button fx:id="btnMuokkaa" mnemonicParsing="false" onMouseClicked="#avaaMuokkaus" text="Muokkaa" />
+                        <Button fx:id="btnTallenna" mnemonicParsing="false" onMouseClicked="#avaaTallenna" text="Tallenna" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </bottom>
+   <left>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <ListChooser fx:id="lcHaku" rivit="" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <TextField text="Haku.." BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="132.0" BorderPane.alignment="CENTER">
+         <top>
+            <TextField editable="false" text="Tiedot" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.39996337890625" minWidth="10.0" prefWidth="132.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="288.6000671386719" minWidth="10.0" prefWidth="267.79998779296875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="90.20001220703125" />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Etunimi" GridPane.halignment="CENTER" />
+                  <TextField fx:id="txtEnimi" editable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtKatuosoite" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtPostinro" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtPuh" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="txtAlkamispvm" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <TextField fx:id="txtTyontekijanro" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <TextField fx:id="txtTyokohteet" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <TextField fx:id="txtPostios" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="txtLisatietoja" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                  <Label text="Katuosoite" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                  <Label text="Postinumero" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                  <Label text="Työnimike" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                  <Label text="Työsuhde" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                  <Label text="Puhelin" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                  <Label text="Alkamispvm" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+                  <Label text="Työntekijänro" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                  <Label text="Työkohteet" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                  <Label text="Postiosoite" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                  <Label text="Lisätietoja" GridPane.halignment="CENTER" GridPane.rowIndex="12" />
+                  <Label text="Sukunimi" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtSnimi" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtSotu" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Sotu" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtTyonimike" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <TextField fx:id="txtTyosuhde" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+            <Menu mnemonicParsing="false" text="Tiedosto">
+               <items>
+                  <MenuItem fx:id="menuVaihda" mnemonicParsing="false" onAction="#avaaTyokohteet" text="Avaa Työkohteet" />
+                  <MenuItem fx:id="menuTallenna" mnemonicParsing="false" onAction="#avaaTallenna" text="Tallenna" />
+                  <MenuItem fx:id="menuSulje" mnemonicParsing="false" onAction="#sulje" text="Sulje" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Lisää">
+               <items>
+                  <MenuItem fx:id="menuLisaa" mnemonicParsing="false" onAction="#avaaLisaa" text="Lisää uusi työntekijä" />
+                  <MenuItem fx:id="menuPoista" mnemonicParsing="false" onAction="#avaaPoista" text="Poista nykyinen työkohde" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ohje">
+               <items>
+                  <MenuItem fx:id="menuApua" mnemonicParsing="false" onAction="#avaaApua" text="Apua" />
+                  <MenuItem fx:id="menuTietoja" mnemonicParsing="false" onAction="#avaaTietoja" text="Tietoja" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
